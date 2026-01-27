@@ -6,6 +6,12 @@ push:
   branches: 
   - main
   - feat/*
+
+  pull_request:
+   branches:
+  - main
+
+  issues:
   
 #Schedule events
 
