@@ -1,26 +1,26 @@
-name: Demo trigger events
-
+Current workflow (if someone needs it):
+ 
+name: demo trigger events
+ 
 on:
-# Webhook events
-push:
-  branches: 
-  - main
-  - feat/*
-
+  # Webhook events
+  push:
+    branches: 
+      - main
+      - feat/* #is this real regex?
   pull_request:
-   branches:
-  - main
-
+    branches:
+      - main
   issues:
-  
-#Schedule events
-
-#Manual events
-
+    types: 
+      - opened
+      - closed
+  # schedule events
+  # manual events
+ 
 jobs:
   Greeting:
     runs-on: ubuntu-latest
     steps:
       - name: Greeting step
-      run: echo Hello World!
-      
+        run: echo "Hello World!"
